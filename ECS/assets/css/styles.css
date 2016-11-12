@@ -39,7 +39,7 @@ section, footer{
 
 #main{
 	width:500px;
-	height:200px;
+	height:400px;
 	margin:0 auto;
 	padding-top:200px;
 }
@@ -74,21 +74,21 @@ section, footer{
 
 
 #bars{
-	height: 212px;
+	height: 330px;
 	margin: 0 auto;
 	position: relative;
-	width: 228px;
+	width: 340px;
 	top:40%;
 	left:40%;
 	margin:-45px 0 0 -45px;
 }
 
 #control{
-	width:90px;
-	height:90px;
+	width:220px;
+	height:220px;
 	position:absolute;
-	top:50%;
-	left:50%;
+	top:40%;
+	left:40%;
 	margin:-45px 0 0 -45px;
 }
 

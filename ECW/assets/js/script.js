@@ -9,15 +9,16 @@ $(function(){
 		'ff5f04','ff4f03','f83a00','ee2b00','e52000'
 	];
 */
-	var colors = [
-		'26e000',
-		'61f800',
-		'93ff0b',
-		'f2ff0a',
-		'ffb509',
-		'ff5f04',
-		'e52000'
-	];
+var colors = [
+	'663300',
+	'FF6600',
+	'FFD800',
+	'34DDDD',
+	'C1D208',
+	'D01A55',
+	'e52000'
+];
+
 
 	var rad2deg = 180/Math.PI;
 	var deg = 0;
@@ -32,10 +33,10 @@ $(function(){
 		$('<div class="colorBar">').css({
 			backgroundColor: '#'+colors[i],
 			transform:'rotate('+deg+'deg)',
-			top: -Math.sin(deg/rad2deg)*80+100,
-			left: Math.cos((180 - deg)/rad2deg)*80+100,
+			top: -Math.sin(deg/rad2deg)*150+180,
+			left: Math.cos((180 - deg)/rad2deg)*150+180,
 		}).appendTo(bars);
-		console.log(i);
+	//	console.log(i);
 	}
 
 	var colorBars = bars.find('.colorBar');
