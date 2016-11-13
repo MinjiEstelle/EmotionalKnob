@@ -14,7 +14,22 @@
     </head>
 
     <body>
-    <button class="button">C</button>
+    <div id="TextBox">
+      <div class="TextBox01" style="color:white; position: absolute; top: 5%; left:30px; width:200px; height:100px;">
+        <font size= "20" style="bold">
+        Humanized Black Cabbie
+      </font>
+      </div>
+      <div class="TextBox02" style="color:white; position: absolute; top: 45%; left:30px; width:200px; height:330px;">
+        <p align = "justify">
+        Please set your emotion using knobe controller and press green button to send your setting to driver.
+        Driver will take care about your emotion.
+      </p>
+      </div>
+
+    </div>
+    <button class="button" onclick="buttonFunction()"> Send to your emotion to driver.</button>
+    <div id="announce"></div>
 		<section id="main">
 
       <div id="emtions">
@@ -43,8 +58,8 @@
 		<script src="assets/knobKnob/knobKnob.jquery.js"></script>
 		<script src="assets/js/script.js"></script>
 
-        <!-- BSA AdPacks code. Please ignore and remove.-->
+        <!-- BSA AdPacks code. Please ignore and remove.
         <script src="http://cdn.tutorialzine.com/misc/adPacks/v1.js" async></script>
-
+        -->
     </body>
 </html>

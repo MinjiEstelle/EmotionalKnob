@@ -46,8 +46,8 @@ $(function(){
 		value: 0,//154,
 		turn : function(ratio){
 			numBars = Math.round(colorBars.length*ratio);
-			console.log(ratio);
-
+			//console.log(ratio);
+			console.log(numBars);
 			// Update the dom only when the number of active bars
 			// changes, instead of on every move
 
@@ -55,9 +55,55 @@ $(function(){
 				return false;
 			}
 			lastNum = numBars;
-
+			numMood = numBars;
 			colorBars.removeClass('active').slice(0, numBars).addClass('active');
 		}
 	});
 
 });
+
+/* Button Function */
+function buttonFunction() {
+    //document.getElementById("demo").innerHTML="Hello World";
+
+		var audio;
+
+		if (numMood == null)
+		{
+			window.alert("please choose your mood");
+		}
+		else if (numMood == 1)
+		{
+			audio = new Audio('assets/data/Boring.wav');
+			audio.play();
+		}
+		else if (numMood == 2)
+		{
+			audio = new Audio('assets/data/Happy.wav');
+			audio.play();
+		}
+		else if (numMood == 3)
+		{
+			audio = new Audio('assets/data/Rest.wav');
+			audio.play();
+		}
+		else if (numMood == 4)
+		{
+			audio = new Audio('assets/data/Sad.wav');
+			audio.play();
+		}
+		else if (numMood == 5)
+		{
+			audio = new Audio('assets/data/Disgust.wav');
+			audio.play();
+		}
+		else if (numMood == 6)
+		{
+			audio = new Audio('assets/data/Angry.wav');
+			audio.play();
+		}
+		else {
+			window.alert("Please choose your mood");
+		}
+
+}
