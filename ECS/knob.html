@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Emotional Supporting System &amp; jQuery | Super-Humanizing the Cabbie</title>
+
+        <!-- CSS stylesheets -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="stylesheet" href="assets/knobKnob/knobKnob.css" />
+
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+
+    <body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
+    <div id="TextBox">
+      <div class="TextBox01" style="color:white; position: absolute; top: 5%; left:30px; width:200px; height:100px;" >
+        <font size= "10" style="bold">
+          <a href="about.html" link="white" alink="white" vlink="white">
+        Super-Humanizing the Cabbie
+      </a>
+      </font>
+      </div>
+
+      <div id="Dname" style="color:#f5fe0f; font-size:20px; position: absolute; top: 50%; left:30px; width:200px; height:20px;"> </div>
+      <div id="Dmood" style="color:#f5fe0f; font-size:20px; position: absolute; top: 60%; left:30px; width:200px; height:20px;"> </div>
+      <div id="Dinterest" style="color:#ffff00; font-size:20px; position: absolute; top: 70%; left:30px; width:200px; height:20px;"> </div>
+      <div id="DTalkative" style="color:#ffff00; font-size:20px; position: absolute; top: 80%; left:30px; width:200px; height:20px;"> </div>
+  <script>
+        var parameters = location.search.substring(1).split("&");
+        var msg1 = new SpeechSynthesisUtterance("Hi!" + name + ". Now, Super-humanizingthecabbie is active mode!");
+        window.speechSynthesis.speak(msg1);
+
+        console.log (parameters);
+         var temp = parameters[0].split("=");
+         if (temp[1].split("+"))
+         {
+           name= temp[1].split("+");
+         }
+          else {
+            name = unescape(temp[1]);
+            console.log (name);
+          }
+          temp = parameters[1].split("=");
+          mood = unescape(temp[1]);
+          temp = parameters[2].split("=");
+          interest = unescape(temp[1]);
+          temp = parameters[3].split("=");
+          range = unescape(temp[1]);
+          console.log (name);
+
+          document.getElementById("Dname").innerHTML = "Hi I'm your driver " + name + "!" ;
+          document.getElementById("Dmood").innerHTML = "Today, I feel " + mood +".";
+          document.getElementById("Dinterest").innerHTML = "and I'm interested in" + interest ;
+          document.getElementById("DTalkative").innerHTML = "Driver's desire of conversing is " + range + "%";
+  </script>
+
+    </div>
+      <div class="TextBox02" style="color:white; position: absolute; top: 90%; left:30px; width:200px; height:250px;">
+        <p align = "justify">
+        Please understand your driver's feeling.
+        Set your emotion using right knobe controller and then press yellow button to send your mood to a cab driver.
+        Driver will take care about your emotion as well.
+      </p>
+      </div>
+
+    <button class="button" onclick="buttonFunction()"> Send to your emotion to driver.</button>
+    <div id="announce"></div>
+		<section id="main">
+      <div id="emtions">
+        <div class="emotions01" style="color:white; position: absolute; top: 20%; left: 60%; width: 240px; height: 150px;"> Joyful Day~! - Can I sing a song or Play music?  </div>
+        <div class="emotions02" style="color:white; position: absolute; top: 45%; left: 75%; width: 240px; height: 150px;"> Need Rest - Leave me alone. </div>
+        <div class="emotions03" style="color:white; position: absolute; top: 70%; left: 73%; width: 240px; height: 150px;"> Tissue Please to wipe my tear! </div>
+        <div class="emotions04" style="color:white; position: absolute; top: 85%; left: 60%; width: 240px; height: 150px;"> I HATE XXX!!! - </div>
+        <div class="emotions05" style="color:white; position: absolute; top: 73%; left: 30%; width: 240px; height: 150px;"> Give Me a Punching-bag!!</div>
+        <div class="emotions06" style="color:white; position: absolute; top: 33%; left: 33%; width: 240px; height: 150px;"> Talkative Mood - Let's talk!  </div>
+        <div class="colorBar active" style="background-color: rgb(244, 248, 250); transform: rotate(0deg); top: 56%; left: 44%; "></div>
+  		<div id="bars">
+				<div id="control"></div>
+			</div>
+    </div> <!-- EMOTION-->
+		</section>
+<!--
+        <footer>
+	        <h2><i>Emotional Supporting System</i> Knob Controller  &amp; jQuery</h2>
+            <a class="tzine" href="http://tutorialzine.com/2011/11/pretty-switches-css3-jquery/">Head on to <i>Tutorial<b>zine</b></i> to download this example</a>
+        </footer>
+-->
+        <!-- JavaScript includes -->
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="assets/knobKnob/transform.js"></script>
+		<script src="assets/knobKnob/knobKnob.jquery.js"></script>
+		<script src="assets/js/script.js"></script>
+
+        <!-- BSA AdPacks code. Please ignore and remove.
+        <script src="http://cdn.tutorialzine.com/misc/adPacks/v1.js" async></script>
+        -->
+    </body>
+</html>

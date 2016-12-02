@@ -15,7 +15,6 @@
 
 
 html{
-	background:url('../img/bg.jpg') #1f2129;
 	position:relative;
 }
 
@@ -26,7 +25,7 @@ body{
 a, a:visited {
 	text-decoration:none;
 	outline:none;
-	color:#fff;
+	color:#54a6de;
 }
 
 a:hover{
@@ -35,6 +34,19 @@ a:hover{
 
 section, footer{
 	display: block;
+}
+
+input[type=text] {
+
+		width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #fefefe;
+		background-color: #1f2129;
+		color: #40403f;
+		font-size: 15px;
 }
 
 #main{
@@ -49,10 +61,10 @@ section, footer{
 	.button {
 		display: inline-block;
 		position:absolute;
-		top:600px;
-		left:250px;
-		width:250px;
-		height:40px;
+		top:450px;
+		left:810px;
+		width:150px;
+		height:145px;
 		z-index:10;
 		cursor:default !important;
 		border: none;
@@ -60,10 +72,10 @@ section, footer{
 		padding: 15px 15px;
  		font-size: 15px;
 	 	cursor: pointer;
-	 	text-align: left;
+	 	text-align: center;
 	 	text-decoration: none;
 	 	outline: none;
-	 	color: #000;
+	 	color: #40403f;
 	 	background-color: #f5fe0f;
 	 	border: none;
 	 	border-radius: 15px;
@@ -72,7 +84,7 @@ section, footer{
 	.button:hover {background-color: #f5fe0f}
 
 	.button:active {
-	  background-color: #2e3004;
+	  background-color: #f5fe0f;
 	  box-shadow: 0 5px #666;
 	  transform: translateY(4px);
 	}

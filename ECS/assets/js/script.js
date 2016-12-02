@@ -1,3 +1,7 @@
+var Dname;
+var Dmood;
+var Dinterest;
+
 $(function(){
 /*
 	var colors = [
@@ -62,7 +66,20 @@ $(function(){
 
 });
 
-/* Button Function */
+
+function processUser()
+{
+	var parameters = location.search.substring(1).split("&");
+
+	var temp = parameters[0].split("=");
+	l = unescape(temp[1]);
+	temp = parameters[1].split("=");
+	p = unescape(temp[1]);
+	document.getElementById("Dname").innerHTML = l;
+	document.getElementById("Dmood").innerHTML = p;
+	console.log("Hello" + Dname + "!, Your mood " + Dmood + " and interested in "+ Dinterest);
+}
+
 function buttonFunction() {
     //document.getElementById("demo").innerHTML="Hello World";
 
@@ -70,35 +87,53 @@ function buttonFunction() {
 
 		if (numMood == null)
 		{
-			window.alert("please choose your mood");
+			window.alert("please choose your mood.");
 		}
-		else if (numMood == 1)
+
+		if (numMood == 1)
 		{
 			audio = new Audio('assets/data/Boring.wav');
-			audio.play();
+		  audio.play();
+		//var msg1 = new SpeechSynthesisUtterance("Your passenger seems to be bored. May I suggest that you either put on some upbeat music, or strike a conversation about your funniest taxi story. ");
+		//window.speechSynthesis.speak(msg1);
 		}
 		else if (numMood == 2)
 		{
+			//var msg1 = new SpeechSynthesisUtterance("Hey! Your passenger seems to be in a good mood. May I suggest that you ask how their day is going, or put on some upbeat tunes at a low volume. ");
+			//window.speechSynthesis.speak(msg1);
+
 			audio = new Audio('assets/data/Happy.wav');
 			audio.play();
 		}
 		else if (numMood == 3)
 		{
+			//var msg1 = new SpeechSynthesisUtterance("Hey! Your guest seems tired mood. May I suggest that you keep conversation to a minimum and ask if she or he would like you to put on some relaxing music? ");
+			//window.speechSynthesis.speak(msg1);
+
 			audio = new Audio('assets/data/Rest.wav');
 			audio.play();
 		}
 		else if (numMood == 4)
 		{
+			//var msg1 = new SpeechSynthesisUtterance("Hey! Your passenger seems to be sad. May I suggest that you ask how they are? If they don’t respond, keep silent and give them space; if they reply, please listen attentively and give questions, not advice. ");
+			//window.speechSynthesis.speak(msg1);
+
 			audio = new Audio('assets/data/Sad.wav');
 			audio.play();
 		}
 		else if (numMood == 5)
 		{
+			//var msg1 = new SpeechSynthesisUtterance("Hey! Your passenger seems to be disgusted. May I suggest that you ask them what’s on their mind? If they respond, address their concerns if you can; if not, listen to more that might have to say. ");
+			//window.speechSynthesis.speak(msg1);
+
 			audio = new Audio('assets/data/Disgust.wav');
 			audio.play();
 		}
 		else if (numMood == 6)
 		{
+			//var msg1 = new SpeechSynthesisUtterance("Hey! Your passenger seems to be angry. May I suggest that you stay quiet or listen if they wish to express themselves?");
+			//window.speechSynthesis.speak(msg1);
+
 			audio = new Audio('assets/data/Angry.wav');
 			audio.play();
 		}
@@ -106,4 +141,21 @@ function buttonFunction() {
 			window.alert("Please choose your mood");
 		}
 
+		changePage();
+}
+
+function changePage()
+{
+	if (numMood == 1 )
+	{
+  	window.open("Talkative.html", "Here is interesting topic!");
+	}
+	else if (numMood == 2)
+	{
+		window.open("SingASong.html", "Here is interesting topic!");
+	}
+	else if (numMood == 3)
+	{
+		window.open("Silience.html", "Have a good rest!");
+	}
 }
