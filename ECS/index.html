@@ -6,18 +6,25 @@
 <link rel="stylesheet" href="assets/css/styles0.css" />
 </head>
 <body background='assets/img/shbc_mainbg.png' onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
+
 <form action="knob.html" method="GET">>
-  <label style="font-size: 16px; color:white; position: absolute; top:450px; left:77px;" for="name">Your Name</label>
-  <input style="color:white; position: absolute; top:425px; left:190px;" type="text" id="name" name="fullname"/>
 
-  <label style="font-size:16px; color:white; position: absolute; top:500px; left:77px;" for="mood">Today's Mood</label>
-  <input style="color:white; position: absolute; top:475px; left:190px;" type="text" id="mood" name="mood" placeholder="#proudME #LeaveMeAlone"/>
+  <label style="font-size: 16px; color:white; position: absolute; top:420px; left:77px;" for="name" >Your Name</label>
+  <input style="color:white; position: absolute; top:390px; left:190px;" type="text" id="name" name="fullname" placeholder="Mark"/>
 
-  <label style="font-size: 16px; color:white; position: absolute; top:550px; left:77px;" for="interest">Your Interest</label>
-  <input style="color:white; position: absolute; top:525px; left:190px;" type="text" id="interest" name="interest"placeholder="#ILOVESPORTS #ILIKEMUSIC"/>
-  <label style="font-size: 16px; color:white; position: absolute; top:600px; left:77px;" for="interest">Talkative Intensity </label>
-  <input type="range" min="0" max="100" value="3.5" step="1" onchange="showValue(this.value)" name="range" style="position: absolute; top:610px; left:220px; width:300px; height:1px;" />
-  <span id="range" style="color:white; position: absolute; top:600px; left:550px; ">0%</span>
+  <label style="font-size:16px; color:white; position: absolute; top:470px; left:77px;" for="mood">Today's Mood</label>
+  <input style="color:white; position: absolute; top:440px; left:190px;" type="text" id="mood" name="mood" placeholder="#proudME #LeaveMeAlone"/>
+
+  <label style="font-size: 16px; color:white; position: absolute; top:520px; left:77px;" for="interest">Your Interest</label>
+  <input style="color:white; position: absolute; top:490px; left:190px;" type="text" id="interest" name="interest"placeholder="#ILOVESPORTS #ILIKEMUSIC"/>
+
+  <label style="font-size: 16px; color:white; position: absolute; top:580px; left:77px;" for="interest">I'm good speaker </label>
+  <input type="range" min="0" max="100" value="3.5" step="1" onchange="showValue(this.value)" name="range" style="position: absolute; top:590px; left:220px; width:300px; height:1px;" />
+  <span id="range" style="color:white; position: absolute; top:580px; left:550px; ">0%</span>
+
+  <label style="font-size: 16px; color:white; position: absolute; top:620px; left:77px;" for="interest">I'm good listenr</label>
+  <input type="range" min="0" max="100" value="3.5" step="1" onchange="showValue1(this.value)" name="range1" style="position: absolute; top:620px; left:220px; width:300px; height:1px;" />
+  <span id="range1" style="color:white; position: absolute; top:620px; left:550px; ">0%</span>
 
 <!-- JavaScript includes -->
 <script type="text/javascript">
@@ -26,6 +33,12 @@ function showValue(newValue)
 {
 	document.getElementById("range").innerHTML=newValue +"%";
 }
+function showValue1(newValue1)
+{
+	document.getElementById("range1").innerHTML=newValue1 +"%";
+}
+audio = new Audio('assets/data/01_Hi.m4a');
+audio.play();
 </script>
 <button class="button"> <b>Be More Polite!</b></button>
 </form>

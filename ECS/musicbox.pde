@@ -12,7 +12,7 @@ void setup()
   img02 = loadImage("assets/data/albums/02.jpg");
   img03 = loadImage("assets/data/albums/03.jpg");
   img04 = loadImage("assets/data/albums/04.jpg");
-
+  img05 = loadImage("assets/data/albums/05.jpg");
 }
 
 void reset()
@@ -78,26 +78,27 @@ void draw()
     vertex(t.p1.x, t.p1.y);
     vertex(t.p2.x, t.p2.y);
     vertex(t.p3.x, t.p3.y);
-    fill(255,255,255);
-    textSize(20);
+    fill(50,55,54);
+    textSize(15);
 
     if (total == 31)
-    { image(img01,t.p3.x, t.p3.y, 200, 200);
+    {
+      image(img01, t.p3.x, t.p3.y, 200, 200);
       text("Black Beatles‬‬‬,Rae Sremmurd Featuring Gucci Mane", t.p3.x, t.p3.y);
     }
     else if (total ==23)
     {
-      image(img02,t.p3.x, t.p3.y, 200, 200);
+      image(img02, t.p3.x, t.p3.y, 200, 200);
       text("Closer, The Chainsmokers Featuring Halsey‬‬", t.p3.x, t.p3.y);
     }
     else if(total ==26 )
     {
-      image(img03,t.p3.x, t.p3.y, 200, 200);
+      image(img03, t.p3.x, t.p3.y, 200, 200);
       text("Starboy, The Weeknd Featuring Daft Punk", t.p3.x, t.p3.y);
     }
     else if(total ==29 )
     {
-      image(img04,t.p3.x, t.p3.y, 200, 200);
+      image(img04, t.p3.x, t.p3.y, 200, 200);
       text("24K Magic‬‬‬, Bruno Mars‬", t.p3.x, t.p3.y);
     }
     else if(total == 30)
@@ -106,6 +107,7 @@ void draw()
     }
     else if(total ==33)
     {
+      image(img05, t.p3.x, t.p3.y, 200, 200);
       text("Side To Side, Ariana Grande Featuring Nicki Minaj", t.p3.x, t.p3.y);
     }
     else if(total ==36)

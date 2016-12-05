@@ -17,7 +17,7 @@
     <div id="TextBox">
       <div class="TextBox01" style="color:white; position: absolute; top: 5%; left:30px; width:200px; height:100px;" >
         <font size= "10" style="bold">
-          <a href="about.html" link="white" alink="white" vlink="white">
+          <a href="index.html" link="white" alink="white" vlink="white">
         Super-Humanizing the Cabbie
       </a>
       </font>
@@ -27,41 +27,51 @@
       <div id="Dmood" style="color:#f5fe0f; font-size:20px; position: absolute; top: 60%; left:30px; width:200px; height:20px;"> </div>
       <div id="Dinterest" style="color:#ffff00; font-size:20px; position: absolute; top: 70%; left:30px; width:200px; height:20px;"> </div>
       <div id="DTalkative" style="color:#ffff00; font-size:20px; position: absolute; top: 80%; left:30px; width:200px; height:20px;"> </div>
-  <script>
+      <script>
         var parameters = location.search.substring(1).split("&");
-        var msg1 = new SpeechSynthesisUtterance("Hi!" + name + ". Now, Super-humanizingthecabbie is active mode!");
-        window.speechSynthesis.speak(msg1);
-
+        audio = new Audio('assets/data/02_Knob.m4a');
+        audio.play();
         console.log (parameters);
-         var temp = parameters[0].split("=");
-         if (temp[1].split("+"))
-         {
-           name= temp[1].split("+");
-         }
-          else {
-            name = unescape(temp[1]);
-            console.log (name);
-          }
-          temp = parameters[1].split("=");
-          mood = unescape(temp[1]);
-          temp = parameters[2].split("=");
-          interest = unescape(temp[1]);
-          temp = parameters[3].split("=");
-          range = unescape(temp[1]);
-          console.log (name);
 
-          document.getElementById("Dname").innerHTML = "Hi I'm your driver " + name + "!" ;
-          document.getElementById("Dmood").innerHTML = "Today, I feel " + mood +".";
-          document.getElementById("Dinterest").innerHTML = "and I'm interested in" + interest ;
-          document.getElementById("DTalkative").innerHTML = "Driver's desire of conversing is " + range + "%";
+         if (!parameters[0])
+         {
+           name = "Mark";
+           mood = "#proudME";
+           interest = "#SOCCER";
+           range = "50";
+           range1 = "50";
+           console.log ("We are here!");
+         }
+         else {
+           var temp = parameters[0].split("=");
+           console.log (temp);
+
+           if (temp[1].split("+"))
+           {
+             name= temp[1].split("+");
+           }
+            else {
+              name = unescape(temp[1]);
+              console.log (name);
+            }
+            temp = parameters[1].split("=");
+            mood = unescape(temp[1]);
+            temp = parameters[2].split("=");
+            interest = unescape(temp[1]);
+            temp = parameters[3].split("=");
+            range = unescape(temp[1]);
+            temp = parameters[4].split("=");
+            range1 = unescape(temp[1]);
+         }
+
+          document.getElementById("Dname").innerHTML = "Hi I'm your driver " + name + "!" + " Today, I feel " + mood + "and I'm interested in " + interest + ". Driver's desire of conversing is " + range + "%" + " and listeing is " + range1 + "%.";
   </script>
 
     </div>
       <div class="TextBox02" style="color:white; position: absolute; top: 90%; left:30px; width:200px; height:250px;">
         <p align = "justify">
-        Please understand your driver's feeling.
-        Set your emotion using right knobe controller and then press yellow button to send your mood to a cab driver.
-        Driver will take care about your emotion as well.
+      Super-Humanizing the Cabbie is an empathetic communication enhancer to support you
+to trigger mutual communication with the driver. Please understand your driver's feelings and consider their moods! Set your emotion using the right knob controller and then press the yellow button to send your mood to the cab driver. The driver will take care about your emotion as well.
       </p>
       </div>
 

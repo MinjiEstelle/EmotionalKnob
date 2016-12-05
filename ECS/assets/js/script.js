@@ -152,10 +152,22 @@ function changePage()
 	}
 	else if (numMood == 2)
 	{
-		window.open("SingASong.html", "Here is interesting topic!");
+		window.open("SingASong.html", "Music Chart!");
 	}
 	else if (numMood == 3)
 	{
 		window.open("Silience.html", "Have a good rest!");
+	}
+	else if (numMood == 4)
+	{
+		window.open("CryingMode.html", "Have a your space!");
+	}
+	else if (numMood == 5)
+	{
+		window.open("HateU.html", "Have a your space!");
+	}
+	else if (numMood == 6)
+	{
+		window.open("Angry.html", "Have a your space!");
 	}
 }
